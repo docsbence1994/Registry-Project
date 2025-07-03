@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     },
                     body: JSON.stringify({
                         name: clientName,
-                        start_time: info.startStr,
-                        end_time: info.endStr
+                        start: info.startStr,
+                        end: info.endStr
                     })
                 })
                 .then(response => response.json())
