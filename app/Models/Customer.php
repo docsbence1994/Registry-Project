@@ -11,7 +11,10 @@ class Customer extends Model
 
     protected $fillable = [
         'name',
-        'start',
-        'end'
+        'start_time',
+        'end_time',
+        'repeat_type',
+        'weekday',
+        'time_of_day'
     ];
 }

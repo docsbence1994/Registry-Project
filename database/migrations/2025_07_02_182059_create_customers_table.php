@@ -14,8 +14,11 @@ return new class extends Migration
         Schema::create('customers', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->dateTime('start');
-            $table->dateTime('end')->nullable();
+            $table->dateTime('start_time');
+            $table->dateTime('end_time');
+            $table->enum('repeat_type', ['none', 'weekly', 'even_weeks', 'odd_weeks'])->default('none');
+            $table->integer('weekday')->nullable();
+            $table->time('time_of_day')->nullable();
             $table->timestamps();
         });
     }
